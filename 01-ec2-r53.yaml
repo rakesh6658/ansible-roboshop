@@ -29,7 +29,7 @@
      zone: "{{HOSTED_ZONE_ID}}"
      record: "{{item}}.{{domain_name}}"
      type: A
-     value: "{{ec2_info.results[loop.index0].instances[0].private_ip_address}}"
+     value: "{{ ec2_info.results[loop.index0].instances[0].private_ip_address }}"
      state: present
      ttl: 1
      overwrite: true # Overwrite if the record already exists with different values
