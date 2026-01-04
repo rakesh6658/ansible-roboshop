@@ -55,7 +55,7 @@
      name: mongodb-mongosh
      state: present
   - name: loading master data
-    ansible.builtin.shell: mongosh --host mongdb.joindevops.store </app/db/master-data.js            
+    ansible.builtin.shell: mongosh --host mongodb.joindevops.store </app/db/master-data.js            
      
    
   
