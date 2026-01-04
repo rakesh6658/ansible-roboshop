@@ -27,12 +27,12 @@
   - name: Create or update a Route 53 A record
     amazon.aws.route53:
      zone: "{{HOSTED_ZONE_ID}}"
-     record: "{{item}}.{{domain_name}}"
+     record: "{{item.item}}.{{domain_name}}"
      type: A
-     value: "{{item.results[0].instances[0].private_ip_address}}"
+     value: "{{item.instances[0].private_ip_address}}"
      state: present
      ttl: 1
      overwrite: true # Overwrite if the record already exists with different values
-    loop: "{{instances}}"  
+    loop: "{{ec2_info.results}}"  
 
      
