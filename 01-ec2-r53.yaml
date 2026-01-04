@@ -26,7 +26,7 @@
      msg: "{{ec2_info.results[0].instances[0].private_ip_address}}" 
   - name: Create or update a Route 53 A record
     amazon.aws.route53:
-     zone: "{{HOSTED_ZONE_ID}}"
+     zone: "{{domain_name}}"
      record: "{{item.item}}.{{domain_name}}"
      type: A
      value: "{{item.instances[0].private_ip_address}}"
