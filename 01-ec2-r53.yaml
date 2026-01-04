@@ -12,7 +12,7 @@
   - name: creating ec2-instances
     amazon.aws.ec2_instance:
         instance_type: t3.micro
-        ami_id: "{{AMI_ID}}" # Replace with a valid AMI ID for your region
+        image_id: "{{AMI_ID}}" # Replace with a valid AMI ID for your region
         
         
         security_group: "{{sg_id}}" # Or the name of your security group
