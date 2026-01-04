@@ -7,7 +7,7 @@
    HOSTED_ZONE_ID: "Z0239863CO9I6JC85ISR"
    domain_name: joindevops.store
    instances:
-    - frontend
+    
   tasks:
   - name: creating ec2-instances
     amazon.aws.ec2_instance:
