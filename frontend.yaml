@@ -17,7 +17,7 @@
      enabled: yes
   - name: Remove default nginx html content
     ansible.builtin.file:
-     path: /usr/share/nginx/html
+     path: /usr/share/nginx/html/*
      state: absent
   - name: Download frontend artifact
     ansible.builtin.get_url:
