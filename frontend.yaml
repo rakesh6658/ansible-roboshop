@@ -19,6 +19,10 @@
     ansible.builtin.file:
      path: /usr/share/nginx/html/*
      state: absent
+  - name: Recreate nginx html directory
+    ansible.builtin.file:
+     path: /usr/share/nginx/html
+     state: directory   
   - name: Download frontend artifact
     ansible.builtin.get_url:
      url: https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
