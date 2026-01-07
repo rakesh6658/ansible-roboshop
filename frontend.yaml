@@ -1,4 +1,4 @@
-- nmae: creating frontend
+- name: creating frontend
   hosts: frontend
   become: yes
   tasks: 
